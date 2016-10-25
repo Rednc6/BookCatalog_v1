@@ -39,12 +39,25 @@ namespace Sandbox
         {
             Book matchingBook = null;
 
+            foreach(Book matchingISBN in books)
+            {
+                
+
+                if (isbn == matchingISBN.GetISBN())
+                {
+                    matchingBook = matchingISBN;
+                }
+               
+            }
+            return matchingBook;
+            // Book matchingISBN = books.Find(x => x.GetISBN() == isbn); // not working, develop new method.
+
             // Add code that will find a book (if any) in the list
             // which has a matching ISBN number. The variable matchingBook
             // should be set to this book
             // Hint: You will need a repetition statement
 
-            return matchingBook;
+
         }
     }
 }
